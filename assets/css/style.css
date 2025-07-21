@@ -1,0 +1,404 @@
+/* Font  Style*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ========================================= VARIABLE CSS ====================================================== 
+Thamplate HTML Version
+Name   : Wahyu Panandita Putra
+license: Version
+Version: 1.0
+Author : Whypndt
+================================================================================================================
+*/
+:root {
+  --header-height: 3.5rem;
+  
+  /* Color */
+  --first-color: hsl(166, 80%, 40%);
+  --first-color-alt: hsl(166, 78%, 38%);
+  --tittle-color: hsl(166, 95%, 15%);
+  --text-color: hsl(166, 12%, 40%);
+  --white-color: hsl(166, 100%, 99%);
+  --dark-color: hsl(166,95%, 12%);
+  --body-color: hsl(166, 56%, 18%);
+  --body-white-color: hsl(0, 0%, 100%);
+  --body-first-color: hsl(166, 80%, 40%);
+  
+/* Font style */  
+  --body-font: 'Montserrat', serif;
+  --second-font: 'Saira', serif;
+  --first-font: 'poppins', sans-serif;
+  
+  /* Font size */
+ --biggest-font-size: 4.5rem;
+ --big-font-size: 2.5rem;
+ --h1-font-size: 1.5rem;
+ --h2-font-size: 1.25rem;
+ --h3-font-size: 1rem;
+ --normal-font-size: .938rem;
+ --small-font-size: .813rem;
+  
+  /* Font Weight */
+  --font-reguler: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  
+  /* Z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/* Responsif Varible mode */
+@media screen and (max-width: 1150px) {
+  :root {
+   --biggest-font-size: 9.5rem;
+   --big-font-size: 4.5rem;
+   --h1-font-size: 2.5rem;
+   --h2-font-size: 1.5rem;
+   --h1-font-size: 1.25rem;
+   --normal-font-size: 1rem;
+   --small-font-size: .875rem;
+  }
+}
+
+/* ========================================= SETUP BASE CSS ============================================ */
+*{
+	  box-sizing: border-box;
+	  padding: 0;
+	  margin: 0;
+	}
+	html{
+	  scroll-behavior: smooth;
+	}
+	input,
+	button,
+	body{
+	  font-family: var(--body-font);
+	  font-size: var(--normal-font-size);
+	}
+	body{
+	  background-color: var(--body-color);
+	  color: var(--text-color);
+	}
+	input,
+	button{
+	  outline: none;
+	  border: none;
+	}
+	h1,h2,h3,h4{
+	  font-family: var(--second-font);
+	  font-weight: var(--font-medium);
+	  line-height: 110%;
+	}
+	ul{
+	  list-style: none;
+	}
+	a{
+	  text-decoration: none;
+	}
+	img{
+	  display: block;
+	  max-width: 100%;
+	  height: auto;
+	}
+	.container{
+	  max-width: 1120px;
+	  margin-inline: 1.5rem;
+	}
+	.grid{
+	  display: grid;
+	  gap: 1.5rem;
+	}
+	.section{
+	  padding-block: 5rem 4rem;
+	}
+	.section-title{
+	  text-align: center;
+	  font-size: var(--big-font-size);
+	  font-weight: var(--font-semi-bold);
+	  margin-bottom: 2.5rem;
+	}
+	.main{
+	  overflow: hidden;
+	}
+
+/* ========================================= HEADER & NAV ============================================ */
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s;
+}
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_logo{
+  position: relative;
+  z-index: 1200;
+}
+.nav_logo img{
+  width: 100px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+.nav_toggle,
+.nav_close{
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-size: 1.8rem;
+  color: var(--white-color);
+  cursor: pointer;
+  z-index: 1500;
+  transition: opacity 0.4s ease;
+}
+
+
+/* Responsif media Screen Navbar mode */
+@media screen and (max-width: 1150px){
+  .nav_menu{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 1100;
+    width: 100%;
+    height: 100%;
+    padding-block: 4rem;
+    box-shadow: 0 8px 16px hsl(166, 85%, 8%, .3);
+    transition: top 0.2s ease-in-out;
+  }
+  .nav_logo img.active{
+    filter: none;
+  }
+}
+.nav_list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+  margin-inline: 1.9rem;
+  margin-top: 1rem;
+}
+
+.nav_link{
+  color: var(--tittle-color);
+  font-weight: var(--font-medium);
+  line-height: 110%;
+  transition: color .4s;
+}
+.nav_link:hover{
+  color: #868a92;
+}
+.nav_close{
+  opacity: 0;
+  pointer-events: none;
+  font-size: 1.5rem;
+}
+.nav_social{
+  margin-top: 3rem;
+  margin-inline: 1.5rem;
+  color: var(--tittle-color);
+  font-weight: var(--font-medium);
+}
+.nav_social-link{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.nav_social a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #868a92;
+  margin-top: 1rem;
+  color: var(--tittle-color);
+  background-color: transparent;
+  font-size: 1rem;
+  transition: .3s;
+  white-space: nowrap;
+  max-width: max-content;
+}
+.nav_social .bxl-youtube,
+.nav_social .bxl-instagram{
+  font-size: 1.2rem;
+}
+.nav_bottom{
+  width: 85%;
+  border-top: 1px solid #868a92;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+.nav_menu{
+   background: linear-gradient(to right, var(--body-white-color) 90%, var(--body-color) 10%);
+}
+/* Show Nav Active */
+.show-menu{
+  top: 0;
+}
+.nav_menu.show-menu ~ .nav_close {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav_menu.show-menu ~ .nav_toggle{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Shadow header */
+.shadow-header {
+  box-shadow: 0 4px 16px hsl(166, 85%, 8%, .3);
+}
+
+/* Making Responsif Mode Small*/
+@media screen and (max-width: 330px){
+  .nav_menu{
+     background: linear-gradient(to right, var(--body-white-color) 84%, var(--body-color) 16%);
+  }
+  .nav_logo img{
+    width: 70px;
+  }
+  .nav_toggle{
+    font-size: 1.5rem;
+    right: -8px;
+  }
+  .nav_close{
+    font-size: 1.1rem;
+    right: -8px;
+  }
+  .nav_list{
+    margin-inline: 1rem;
+    row-gap: 1rem;
+  }
+   .nav_link{
+    font-size: 0.75rem;
+    margin-inline: 1rem;
+  }
+  .nav_social span{
+   margin-inline: .5rem;
+   font-size: 0.75rem;
+   font-weight: var(--font-semi-bold);
+  }
+  .nav_social a{
+    font-size: 0.75rem;
+     padding: 0.5rem 0.75rem;
+  }
+  .nav_bottom{
+    max-width: 70%;
+    margin-inline: .5rem;
+  }
+}
+/* Making Responsif Mode Medium*/
+@media screen and (min-width: 331px) and (max-width: 575px){  
+  .nav_menu{
+    background: linear-gradient(to right, var(--body-white-color) 88%, var(--body-color) 12%);
+  }
+  .nav_logo img{
+    width: 90px;
+  }
+  .nav_list{
+    row-gap: 1.2rem;
+    margin-inline: 1.2rem;
+  }
+  .nav_social a{
+    font-size: 1rem;
+  }
+  .section-title{
+    font-size: var(--h1-font-size);
+  }
+  .nav_toggle{
+    font-size: 1.5rem;
+    right: -7px;
+  }
+  .nav_close{
+    font-size: 1.1rem;
+    right: -7px;
+  }
+}
+/* Making Responsif Mode Medium*/
+@media screen and (min-width: 576px) and (max-width: 767px){
+  .nav_menu{
+    background: linear-gradient(to right, var(--body-white-color) 88%, var(--body-color) 12%);
+  }
+  .nav_logo img{
+    width: 100px;
+  }
+  .nav_list{
+    row-gap: 1.5rem;
+    font-size: 0.938rem;
+  }
+  .nav_social a{
+    font-size: 0.938rem;
+  }
+  .section_title{
+    font-size: 2rem;
+  }
+}
+
+/* Making Responsif Mode Large*/
+@media screen and (min-width: 768px) and (max-width: 1114px){
+  .nav_menu{
+    background: linear-gradient(to right, var(--body-white-color) 90%, var(--body-color) 10%);
+  }
+  .nav_logo img{
+    width: 110px;
+  }
+  .nav_list{
+    row-gap: 2rem;
+  }
+  .nav_social a{
+    font-size: 1rem;
+  }
+  .section-title{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1115px){
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav_menu{
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    background: transparent;
+    height: var(--header-height);
+    padding: 0;
+    box-shadow: none;
+  }
+  .nav_list{
+    flex-direction: row;
+    column-gap: 2.5rem;
+    margin: 0;
+  }
+  .nav_social, .nav_close, .nav_toggle{
+    display: none;
+  }
+  .nav_link{
+    font-size: var(--normal-font-size);
+    color: var(--white-color);
+  }
+  .nav_link:hover{
+    color: #868a92;
+  }
+  .nav_logo{
+    width: 150px;
+  }
+  .section-title{
+    font-size: var(--big-font-size);
+  }
+}

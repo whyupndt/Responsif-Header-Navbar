@@ -1,0 +1,258 @@
+
+
+<!--=================================== MAIN SECTION ==================================================-->
+    <main class="main">
+    <!--===================== HOME ==========================-->
+    <section class="home" id="home">
+        <div class="home_container container grid">
+         <!---- Home Data ---->
+         <div class="home_data">
+            <p class="home_description">
+                Welcome to SEDJUK BAKMI dan Kopi Since 2018, Started from gerage with family receipes
+            </p>
+            <a href="#" class="button">The Best Coffee</a>
+         </div>  
+         <!---- Home Images ----> 
+         <div class="home_images">
+            <h2 class="home_title">KOPI SEDJUK</h2>
+            <div class="home_shape"></div>
+            <img src="assets/img/favicon.png" alt="image" class="home_stiker">
+            <img src="assets/img/about-coffe.png" alt="image" class="home_bijikopi">
+            <img src="assets/img/home-coffe.png" alt="image" class="home_coffe">
+         </div>
+         <p class="home_tagline">Apalah Arti Sempurna <br> Bila Tak Menyedjukan</p>
+         <p class="home_description-1">#SedjukSetiapSaat</p>
+        </div>
+    </section>
+
+    <!--===================== INSTAGRAM ==========================-->
+    <section class="instagram section">
+        <div class="instagram_container">
+          <!--- Instagram Header--->
+          <div class="instagram_logo">
+            <img src="assets/img/smn.jpeg" alt="image">
+          </div>
+          <a href="" class="instagram_link" target="_blank">
+            <i class="bx bxl-instagram"></i>
+            <span>sedjuk.bakmidankopi</span>
+          </a>
+        </div>
+        <!--- Instagram Swiper --->
+        <div class="instagram_content swiper instagramSwiper container">
+          <div class="swiper-wrapper">
+            <!--- Slide 1 --->
+            <div class="swiper-slide">
+              <div class="instagram_grid">
+                <a href=""><img src="assets/img/post-1.jpeg" alt="post-1"></a>
+                <a href=""><img src="assets/img/post-2.jpeg" alt="post-2"></a>
+                <a href=""><img src="assets/img/post-3.jpeg" alt="post-3"></a>
+                <a href=""><img src="assets/img/post-4.jpeg" alt="post-4"></a>
+                <a href=""><img src="assets/img/post-5.jpeg" alt="post-5"></a>
+                <a href=""><img src="assets/img/post-6.jpeg" alt="post-6"></a>
+              </div>
+            </div>
+
+            <!--- Slide 2 --->
+            <div class="swiper-slide">
+              <div class="instagram_grid">
+                <a href=""><img src="assets/img/post-7.jpeg" alt="post-1"></a>
+                <a href=""><img src="assets/img/post-8.jpeg" alt="post-2"></a>
+                <a href=""><img src="assets/img/post-9.jpeg" alt="post-3"></a>
+                <a href=""><img src="assets/img/post-10.jpeg" alt="post-4"></a>
+                <a href=""><img src="assets/img/post-11.jpeg" alt="post-5"></a>
+                <a href=""><img src="assets/img/post-12.jpeg" alt="post-6"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    </main>
+    <!--====================================== FOOTER =====================================================-->
+
+
+	<!---- Swiper JS ---->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!---- Link Swiper CSS ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+/* ========================================= SECTION HOME ============================================ */
+.home_container{
+  padding-top: 5.5rem;
+}
+.home_data{
+  text-align: center;
+}
+.home, .home_title, .home_description, .home_tagline, .home_description-1{
+  color: var(--white-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.home_images{
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+}
+.home_shape{
+  width: 300px;
+  height: 300px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+  clip-path: inset(50% 0 0 0);
+}
+.home_images img{
+  position: absolute;
+}
+.home_coffe{
+  width: 300px;
+  height: 350px;
+  top: -.2rem;
+  filter: drop-shadow(0 8px 16px hsla(166, 85%, 8%, .5));
+}
+.home_bijikopi{
+  top: .9rem;
+}
+.home_stiker{
+  position: absolute;
+  width: 50px;
+  right: .5rem;
+  top: .5rem;
+  filter: brightness(0) invert(1);
+}
+.home_title{
+  font-weight: var(--font-semi-bold);
+  position: absolute;
+  font-size: 5rem;
+  top: -1rem;
+}
+.home_tagline{
+  font-weight: var(--font-semi-bold);
+}
+
+/* Button*/
+.button{
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--white-color);
+  color: var(--tittle-color);
+  padding: 1rem 1rem;
+  font-weight: var(--font-semi-bold);
+  transition: background .4s box-shadow .4s;
+  margin-bottom: 1.2rem;
+}
+
+/* ========================================= INSTAGRAM ============================================ */
+.instagram{
+  background-color: var(--body-white-color);
+}
+.instagram_container{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  margin-bottom: 0.9rem;
+  width: 95%;
+}
+.instagram_content{
+  overflow: hidden;
+  padding: 0;
+}
+.instagramSwiper{
+  width: 90%;
+}
+.instagram_logo{
+  width: 50px;
+  margin-inline: 1.5rem;
+}
+.instagram_link{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--tittle-color);
+  border: 1px solid #868a92;
+  padding: 0.60rem 0.75rem;
+  border-radius: 0.2rem;
+}
+.instagram_link i{
+  font-size: 0.60rem;
+  color: #E1306C;
+}
+.instagram_link span{
+    font-size: 0.60rem;
+    text-align: center;
+}
+.instagram_grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.instagram_grid a img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+.swiper-slide{
+  width: 100% !important;
+}
+
+
+window.addEventListener('scroll', scrollHeader)
+
+  var instagramSwiper = new Swiper('.instagramSwiper', {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false, 
+    }, 
+  });
+
+ window.addEventListener("load", function() {
+   const swiper = new Swiper(".mySwiper", {
+     loop: true,
+     spaceBetween: 24,
+     grabCursor: true,
+     slidesPerView: 1,
+     pagination: {
+       el: ".swiper-pagination",
+       clickable: true,
+     },
+     autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+     breakpoints: {
+       768: {
+         slidesPerView: 2,
+       },
+       1024: {
+         slidesPerView: 3,
+       },
+     },
+   });
+ });
+ 
+
+  const openFormBtn = document.getElementById("openFormBtn");
+  const closeFormBtn = document.getElementById("closeForm");
+  const popupForm = document.getElementById("popupForm");
+
+  openFormBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    popupForm.style.display = "flex";
+  });
+
+  closeFormBtn.addEventListener("click", function() {
+    popupForm.style.display = "none";
+  });
+
+  // Optional: Tutup form saat klik luar popup
+  window.addEventListener("click", function(e) {
+    if (e.target === popupForm) {
+      popupForm.style.display = "none";
+    }
+  });
